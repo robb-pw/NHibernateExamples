@@ -6,6 +6,8 @@
     using NHibernate;
     using NHibernate.Cfg;
     using NHibernate.Tool.hbm2ddl;
+    using NHibernate.Linq;
+    using System.Linq;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -45,6 +47,54 @@
         private void btnCreateSessionFactory_Click(object sender, RoutedEventArgs e)
         {
             var factory = CreateSessionFactory();
+        }
+
+        private void btnCreateSession_Click(object sender, RoutedEventArgs e)
+        {
+            var factory = CreateSessionFactory();
+            using (var session = factory.OpenSession())
+            {
+                
+            }
+        }
+
+        private void btnAddCategory_Click(object sender, RoutedEventArgs e)
+        {
+            var factory = CreateSessionFactory();
+            using (var session = factory.OpenSession())
+            {
+                var category = new Category
+                                   {
+                                       Name = txtCategoryName.Text.Trim(),
+                                       Description = txtCategoryDescription.Text.Trim()
+                                   };
+                session.Save(category);
+            }
+
+            LoadCategories();
+        }
+
+        private void btnLoadCategories_Click(object sender, RoutedEventArgs e)
+        {
+            LoadCategories();
+        }
+
+        private void LoadCategories()
+        {
+            var factory = CreateSessionFactory();
+            using (var session = factory.OpenSession())
+            {
+                var categories = session.Query<Category>()
+                    .OrderBy(c => c.Name).ToList();
+
+                lstCategories.ItemsSource = categories;
+                lstCategories.DisplayMemberPath = "Name";
+            }
+        }
+
+        private void btnAddProduct_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

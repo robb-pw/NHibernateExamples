@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OrderingSystem.Domain.Customer">
+    <Position X="7.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAABAAAAAAAAAAAAAAAAQAAAAAACQAAAAAAAAEA=</HashCode>
+      <FileName>Domain\Customer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CustomerName" />
+      <Property Name="Address" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OrderingSystem.Domain.Entity&lt;T&gt;">
+    <Position X="5.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>Domain\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrderingSystem.Domain.Name">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAgAAQAAAAAAAAAIAAAAAAAAAAAAg=</HashCode>
+      <FileName>Domain\Name.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrderingSystem.Domain.Address">
+    <Position X="8" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIgAAAAAAAAAAAAIAhAAAARAAAAAA=</HashCode>
+      <FileName>Domain\Address.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrderingSystem.Domain.Employee">
+    <Position X="9.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrderingSystem.Domain.LineItem">
+    <Position X="5.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAECAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAgAAAAAA=</HashCode>
+      <FileName>Domain\LineItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrderingSystem.Domain.Order">
+    <Position X="2.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAEAgACAAAAAAAIAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OrderingSystem.Domain.Product">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAAAAAAAAAgAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

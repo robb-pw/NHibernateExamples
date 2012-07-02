@@ -6,6 +6,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Button x:Name="btnCreateDatabase" 
                 Content="Create Database" 
@@ -14,5 +16,29 @@
                 Content="Create Database"
                 Click="btnCreateSessionFactory_Click"
                 Grid.Row="1"/>
+        <Button x:Name="btnCreateSession"
+                Content="Create Session"
+                Click="btnCreateSession_Click"
+                Grid.Row="2" />
+        <Grid x:Name="CategoryGrid" Grid.Row="3" Margin="0 10 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Category Name:" />
+            <TextBlock Text="Category Description: " Grid.Row="1" />
+            <TextBox x:Name="txtCategoryName" Grid.Row="0" Grid.Column="1" />
+            <TextBox x:Name="txtCategoryDescription" Grid.Row="1" Grid.Column="1" />
+            <Button x:Name="btnAddCategory" Content="Add Category" Grid.Row="2" Click="btnAddCategory_Click" />
+            <Button x:Name="btnLoadCategories" Content="Load Categories" Grid.Row="3" VerticalAlignment="Top" Click="btnLoadCategories_Click" />
+            <ListBox x:Name="lstCategories" Grid.Row="3" Grid.Column="1" />
+        </Grid>
     </Grid>
 </Window>
